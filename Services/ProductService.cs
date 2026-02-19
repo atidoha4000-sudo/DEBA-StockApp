@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.IO;
 using Microsoft.Data.Sqlite;
 using DEBA.StockApp.Models;
 
@@ -10,9 +11,14 @@ namespace DEBA.StockApp.Services
     {
         private readonly string _connectionString;
 
-        public ProductService(string connectionString = "Data Source=deba_stock.db")
+        public ProductService(string? connectionString = null)
         {
-            _connectionString = connectionString;
+            connectionString ??= Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "DEBA",
+                "deba_stock.db");
+            
+            _connectionString = $"Data Source={connectionString}";
         }
 
         public async Task AddAsync(Product product)

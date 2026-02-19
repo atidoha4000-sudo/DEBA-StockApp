@@ -66,22 +66,25 @@
                         </StackPanel>
                     </Grid>
 
-                    <!-- Buttons -->
+        <!-- Buttons -->
                     <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
                         <Button Command="{Binding AddCommand}" 
                                 Background="#4CAF50" Foreground="White" Padding="15,8" FontWeight="Bold">
                             ➕ Ajouter
                         </Button>
                         <Button Command="{Binding UpdateCommand}" 
-                                Background="#2196F3" Foreground="White" Padding="15,8" FontWeight="Bold">
+                                Background="#2196F3" Foreground="White" Padding="15,8" FontWeight="Bold"
+                                Margin="5,0,0,0">
                             ✏️ Modifier
                         </Button>
                         <Button Command="{Binding DeleteCommand}" 
-                                Background="#F44336" Foreground="White" Padding="15,8" FontWeight="Bold">
+                                Background="#F44336" Foreground="White" Padding="15,8" FontWeight="Bold"
+                                Margin="5,0,0,0">
                             🗑️ Supprimer
                         </Button>
                         <Button Command="{Binding RefreshCommand}" 
-                                Background="#FF9800" Foreground="White" Padding="15,8" FontWeight="Bold">
+                                Background="#FF9800" Foreground="White" Padding="15,8" FontWeight="Bold"
+                                Margin="5,0,0,0">
                             🔄 Actualiser
                         </Button>
                     </StackPanel>
